@@ -1,4 +1,12 @@
+
+
+
+Title.
+CODE_CHALLANGE WEEK 1
+
+DESCRIPTION.
 The file comtains three projects linked by one index file with a nav bar to navigate through the entire challange.
+
 1: SPEED _ DETECTOR.
 employed the use of a simple interface and a javascript file.
 In this one I used a prompt as oppossed to the general UI from html.
@@ -19,3 +27,4 @@ Has a simple index.html file for UGI purposes only.
 In this partic;ar challange, I used the conventional way of the user and sysem interaction.
 In the html doc, a user input their salary and the website returns all the deductions made.
 It has a very simple UI that just displays the resultd after input of the basic salary.
+
