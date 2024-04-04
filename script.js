@@ -1,4 +1,4 @@
-/ speed detecting system. speed<70 = ok.
+// speed detecting system. speed<70 = ok.
 // for every 5km per hour above 70 = i demerit point.
 //print total demerit points
 // if demerit points are >12 print license suspended.
@@ -12,20 +12,22 @@ function checkSpeed() {
         console.error("Car speed input element not found");
         return;
     }
-
+//setting the program to accept only integer user input.
     const carSpeed = carSpeedElement.value;
     const currentSpeedInt = parseInt(carSpeed);
+
+    //showing where to get points and acr as a default/ control.
 
     const demeritPointsElement = document.getElementById("demeritPoints");
     if (!demeritPointsElement) {
         console.error("Demerit points input element not found");
         return;
     }
-
+//defining the demerit point variables.
     const demeritPoints = demeritPointsElement.value;
     const demeritPointsInt = parseInt(demeritPoints);
     
-//we now set the conditions to be satisfied
+//we now set the conditions to be satisfied speed check logic.
     if (currentSpeedInt <= 70) {
         console.log("Ok");
         
