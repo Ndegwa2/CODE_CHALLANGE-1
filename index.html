@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODE CHALLANGES</title>
+    <script>function checkSpeed() {
+    const carSpeedElement = document.getElementById("car-speed");
+    const demeritPointsElement = document.getElementById("demeritPoints");
+
+    const carSpeed = parseInt(carSpeedElement.value);
+    const demeritPoints = parseInt(demeritPointsElement.value);
+
+    if (isNaN(carSpeed) || isNaN(demeritPoints)) {
+        console.error("Invalid input. Please enter numbers.");
+        return;
+    }
+
+    if (carSpeed <= 70) {
+        console.log("Ok");
+    } else {
+        const exceededSpeed = carSpeed - 70;
+        const points = Math.floor(exceededSpeed / 5);
+        const totalPoints = demeritPoints + points;
+
+        console.log(`You received ${points} demerit points`);
+        console.log(`Your current demerit points are ${totalPoints}`);
+
+        if (totalPoints > 12) {
+            console.log("License suspended");
+        } else {
+            console.log("Drive safe, nice driving!");
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("check-speed").addEventListener("click", checkSpeed);
+});
+</script>
     <style>
         body{
             background-color: azure;
